@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Funky_Xamarin&#39;s Blog</title>
+  
+  <subtitle>xamarin is funky like funkyway!</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://wenfengcheng.github.io/"/>
+  <updated>2019-02-22T01:47:40.363Z</updated>
+  <id>https://wenfengcheng.github.io/</id>
+  
+  <author>
+    <name>Funky_Xamarin</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>hello-hexo</title>
+    <link href="https://wenfengcheng.github.io/2019/02/19/hello-hexo/"/>
+    <id>https://wenfengcheng.github.io/2019/02/19/hello-hexo/</id>
+    <published>2019-02-19T09:36:03.000Z</published>
+    <updated>2019-02-22T01:47:40.363Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;这是我的第一篇博客，你好，Hexo。&lt;/p&gt;
+
+        
+      
+    
+    </summary>
+    
+      <category term="hexo" scheme="https://wenfengcheng.github.io/categories/hexo/"/>
+    
+    
+      <category term="hexo" scheme="https://wenfengcheng.github.io/tags/hexo/"/>
+    
+      <category term="blog" scheme="https://wenfengcheng.github.io/tags/blog/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://wenfengcheng.github.io/2019/02/19/hello-world/"/>
+    <id>https://wenfengcheng.github.io/2019/02/19/hello-world/</id>
+    <published>2019-02-19T09:04:25.559Z</published>
+    <updated>2019-02-22T01:47:39.016Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+        
+      
+    
+    </summary>
+    
+      <category term="github" scheme="https://wenfengcheng.github.io/categories/github/"/>
+    
+    
+      <category term="hexo" scheme="https://wenfengcheng.github.io/tags/hexo/"/>
+    
+      <category term="github" scheme="https://wenfengcheng.github.io/tags/github/"/>
+    
+  </entry>
+  
+</feed>
