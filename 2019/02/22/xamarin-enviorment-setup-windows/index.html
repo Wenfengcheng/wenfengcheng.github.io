@@ -112,7 +112,7 @@
 
 
 
-  <meta name="keywords" content="xamarin,windows,enviorment-setup,">
+  <meta name="keywords" content="xamarin,enviorment-setup,windows,">
 
 
 
@@ -123,13 +123,13 @@
 
 
 
-<meta name="description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin.Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windwos 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windwos">
-<meta name="keywords" content="xamarin,windows,enviorment-setup">
+<meta name="description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
+<meta name="keywords" content="xamarin,enviorment-setup,windows">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xamarin开发(Windows开发)环境配置">
 <meta property="og:url" content="https://wenfengcheng.github.io/2019/02/22/xamarin-enviorment-setup-windows/index.html">
 <meta property="og:site_name" content="Funky_Xamarin&#39;s Blog">
-<meta property="og:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin.Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windwos 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windwos">
+<meta property="og:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-cb16db68fe8fe4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-80853d822c2dede1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
@@ -152,10 +152,10 @@
 <meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/ios-toolbar.png">
 <meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/pairtomac.png">
 <meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/auth.png">
-<meta property="og:updated_time" content="2019-02-22T07:17:24.188Z">
+<meta property="og:updated_time" content="2019-02-25T04:15:50.764Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xamarin开发(Windows开发)环境配置">
-<meta name="twitter:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin.Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windwos 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windwos">
+<meta name="twitter:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
 <meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4421101-cb16db68fe8fe4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
@@ -399,7 +399,7 @@
 
       
         <blockquote>
-<p>写在前面：<br>最近在整理之前写的博客的时候，发现对于 <em>Xamarin</em> 环境开发配置的内容还停留在 <em>VS 2015</em> 以及 <em>Xamarin.Studio</em> 的阶段，最近把 <em>Xamarin</em> 环境搭建的文章进行了一次完整的更新，本文将主要介绍 <strong>Windwos</strong> 上的环境搭建，对于 <strong>Mac</strong> 上的开发环境配置可以参考 <a href="https://www.jianshu.com/p/abb9ae9df631" target="_blank" rel="noopener">Xamarin开发(Mac开发)环境配置</a>  查看详细介绍，相对 <strong>Mac</strong> 来说, 在 <strong>Windwos</strong> 上 <em>Xamarin</em> 的环境搭建相对麻烦很多，而且其中需要注意的点也非常多。</p>
+<p>写在前面：<br>最近在整理之前写的博客的时候，发现对于 <em>Xamarin</em> 环境开发配置的内容还停留在 <em>VS 2015</em> 以及 <em>Xamarin Studio</em> 的阶段，最近把 <em>Xamarin</em> 环境搭建的文章进行了一次完整的更新，本文将主要介绍 <strong>Windows</strong> 上的环境搭建，对于 <strong>Mac</strong> 上的开发环境配置可以参考 <a href="/2019/02/25/xamarin-enviorment-setup-macos">Xamarin开发(Mac开发)环境配置</a>  查看详细介绍，相对 <strong>Mac</strong> 来说, 在 <strong>Windows</strong> 上 <em>Xamarin</em> 的环境搭建相对麻烦很多，而且其中需要注意的点也非常多。</p>
 </blockquote>
 <a id="more"></a>
 <h1 id="安装-Visual-Studio-2017-搭建-Xamarin-开发环境"><a href="#安装-Visual-Studio-2017-搭建-Xamarin-开发环境" class="headerlink" title="安装 Visual Studio 2017 搭建 Xamarin 开发环境"></a>安装 Visual Studio 2017 搭建 Xamarin 开发环境</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在 Visual Studio 2017 中安装 Xamarin 需要以下项：</p>
@@ -577,9 +577,9 @@
           
             <a href="/tags/xamarin/" <i class="fa fa-tag"> xamarin</a>
           
-            <a href="/tags/windows/" <i class="fa fa-tag"> windows</a>
-          
             <a href="/tags/enviorment-setup/" <i class="fa fa-tag"> enviorment-setup</a>
+          
+            <a href="/tags/windows/" <i class="fa fa-tag"> windows</a>
           
         </div>
       
@@ -601,6 +601,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/25/xamarin-enviorment-setup-macos/" rel="prev" title="Xamarin开发(MacOS开发)环境配置">
+                Xamarin开发(MacOS开发)环境配置 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -679,8 +683,8 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
-                  <span class="site-state-item-name">日志</span>
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">博客</span>
                 </a>
               </div>
             
@@ -701,7 +705,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
@@ -782,14 +786,20 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Funky_Xamarin</span>
 
   
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_uv"></span>
+</span>
 </div>
 
 
