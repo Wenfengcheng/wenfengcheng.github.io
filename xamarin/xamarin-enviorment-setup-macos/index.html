@@ -14,6 +14,13 @@
 
 
 
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+
 
 
 
@@ -127,7 +134,7 @@
 <meta name="keywords" content="xamarin,macos,enviorment-setup">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xamarin开发(MacOS开发)环境配置">
-<meta property="og:url" content="https://wenfengcheng.github.io/2019/02/25/xamarin-enviorment-setup-macos/index.html">
+<meta property="og:url" content="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-macos/index.html">
 <meta property="og:site_name" content="Funky_Xamarin&#39;s Blog">
 <meta property="og:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 MacOS 上的环境搭建，对于 Windows 上的开发环境配置可以参考 Xamarin开发(Windows开发)环境配置  查看详细介绍，相对 Windows 来说,">
 <meta property="og:locale" content="zh-Hans">
@@ -186,7 +193,7 @@
 
 
 
-  <link rel="canonical" href="https://wenfengcheng.github.io/2019/02/25/xamarin-enviorment-setup-macos/">
+  <link rel="canonical" href="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-macos/">
 
 
 
@@ -267,6 +274,26 @@
         </li>
       
         
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -309,7 +336,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wenfengcheng.github.io/2019/02/25/xamarin-enviorment-setup-macos/">
+    <link itemprop="mainEntityOfPage" href="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-macos/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Funky_Xamarin">
@@ -332,19 +359,19 @@
         <div class="post-meta">
           <span class="post-time">
             
+
+            
+
+            
               <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-alt"></i>
+                <i class="fa fa-calendar-check-o"></i>
               </span>
               
-                <span class="post-meta-item-text">发表于</span>
+                <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-02-25T11:42:24+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-25T12:15:18+08:00">
                 2019-02-25
               </time>
-            
-
-            
-
             
           </span>
 
@@ -378,7 +405,7 @@
 
           
           
-             <span id="/2019/02/25/xamarin-enviorment-setup-macos/" class="leancloud_visitors" data-flag-title="Xamarin开发(MacOS开发)环境配置">
+             <span id="/xamarin/xamarin-enviorment-setup-macos/" class="leancloud_visitors" data-flag-title="Xamarin开发(MacOS开发)环境配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -607,7 +634,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/02/22/xamarin-enviorment-setup-windows/" rel="next" title="Xamarin开发(Windows开发)环境配置">
+              <a href="/xamarin/xamarin-enviorment-setup-windows/" rel="next" title="Xamarin开发(Windows开发)环境配置">
                 <i class="fa fa-chevron-left"></i> Xamarin开发(Windows开发)环境配置
               </a>
             
@@ -730,10 +757,10 @@ var jiathis_config={
               
               
               <div class="site-state-item site-state-categories">
-                
+                <a href="/categories/index.html">
                   <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
-                
+                </a>
               </div>
             
 
@@ -741,10 +768,10 @@ var jiathis_config={
               
               
               <div class="site-state-item site-state-tags">
-                
+                <a href="/tags/index.html">
                   <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">标签</span>
-                
+                </a>
               </div>
             
 
@@ -844,6 +871,26 @@ var jiathis_config={
 
 
         
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      <i class="fa fa-user"></i> 总访问人数
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      人次
+    </span>
+  
+
+  
+    <span class="site-pv">
+      <i class="fa fa-eye"></i> 总访问量
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
 
 
 
