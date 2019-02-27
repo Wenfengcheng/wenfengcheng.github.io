@@ -19,7 +19,7 @@
     
     
   <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link href="/lib/pace/pace-theme-mac-osx.min.css?v=1.0.2" rel="stylesheet">
+  <link href="/lib/pace/pace-theme-corner-indicator.min.css?v=1.0.2" rel="stylesheet">
 
 
 
@@ -133,15 +133,16 @@
 <meta name="description" content="写在前面：">
 <meta name="keywords" content="Xamarin,Library,Android,iOS ,Bindings">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xamarin 中如何使用原生 SDK">
+<meta property="og:title" content="Xamarin 中能否使用原生 SDK">
 <meta property="og:url" content="https://wenfengcheng.github.io/Bindings/xamarin-binding-intro/index.html">
 <meta property="og:site_name" content="Funky_Xamarin&#39;s Blog">
 <meta property="og:description" content="写在前面：">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
-<meta property="og:updated_time" content="2019-02-26T09:01:27.232Z">
+<meta property="og:image" content="https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/images/architecture.png#lightbox">
+<meta property="og:updated_time" content="2019-02-27T09:56:59.342Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xamarin 中如何使用原生 SDK">
+<meta name="twitter:title" content="Xamarin 中能否使用原生 SDK">
 <meta name="twitter:description" content="写在前面：">
 <meta name="twitter:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
 
@@ -179,7 +180,7 @@
 
 
 
-  <title>Xamarin 中如何使用原生 SDK | Funky_Xamarin's Blog</title>
+  <title>Xamarin 中能否使用原生 SDK | Funky_Xamarin's Blog</title>
   
 
 
@@ -365,7 +366,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Xamarin 中如何使用原生 SDK</h1>
+          <h1 class="post-title" itemprop="name headline">Xamarin 中能否使用原生 SDK</h1>
         
 
         <div class="post-meta">
@@ -381,8 +382,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-26T17:01:27+08:00">
-                2019-02-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-27T17:56:59+08:00">
+                2019-02-27
               </time>
             
           </span>
@@ -427,7 +428,7 @@
 
           
           
-             <span id="/Bindings/xamarin-binding-intro/" class="leancloud_visitors" data-flag-title="Xamarin 中如何使用原生 SDK">
+             <span id="/Bindings/xamarin-binding-intro/" class="leancloud_visitors" data-flag-title="Xamarin 中能否使用原生 SDK">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +453,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  16
+                  864
                 </span>
               
 
@@ -468,7 +469,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  3 分钟
                 </span>
               
             </div>
@@ -493,9 +494,35 @@
 <p>写在前面：</p>
 </blockquote>
 <a id="more"></a>
+<h1 id="从头开始还是绑定？"><a href="#从头开始还是绑定？" class="headerlink" title="从头开始还是绑定？"></a>从头开始还是绑定？</h1><p>使用Xamarin，在编写SDK时通常有两种选择。您可以从理想情况下开始使用足够通用的PCL项目来定位所有平台，或者您可以创建一个绑定项目，该项目基本上将本机库“包装”在C＃API中。</p>
+<p>如果你的SDK不能访问任何原生功能（或者很少），你可能更好的只是创建PCL PCL还可以为标准iOS，Android和UWP之外的其他平台提供更大的灵活性。</p>
+<p>在我们的例子中，由于我们依赖于许多底层本机API（例如围绕安装跟踪），我们决定采用绑定方法。</p>
+<h1 id="Binding-步骤"><a href="#Binding-步骤" class="headerlink" title="Binding 步骤"></a>Binding 步骤</h1><p>在 <em>Xamarin</em> 中使用第三方 <em>SDK</em> 的大概步骤：</p>
+<ol>
+<li>使用原生构建 <em>.jar/.aar(用于Java绑定)</em> 和 <em>.a/.framework(用于OC/Swift绑定)</em> 文件。<blockquote>
+<p>友情提示：<br>这里可以 <em>clone or copy Java, OC, Swift</em> 代码自己构建，或者直接使用第三方已经生成好的  <em>.jar/.aar</em> 和 <em>.a/.framework</em></p>
+</blockquote>
+</li>
+<li>在 <em>Visual Studio/Visual Studio for Mac</em> 中为 <em>Android</em> 创建一个空的 <em>Binding Library(绑定库)</em> 并添加 <em>.jar/.aar</em>,  <a href="https://en.wikipedia.org/wiki/Mono_(software" target="_blank" rel="noopener">Mono</a> 框架将尽可能多为我们创建 <em>C＃</em> 类。</li>
+<li>为 <em>iOS</em> 创建一个 <em>Fat library(完整架构库)</em>, 它应该包含 <em>x86 和 arm</em> 体系结构。</li>
+<li>使用 <em>Objective Sharpie(sharpie bind)</em> 为iOS自动生成C＃类。我们可以从 <em>Pod 自动创建 或.h文件 手动生成它们</em>  。此命令将创建两个文件：<em>ApiDefinitions.cs 和 StrucsAndEnums.cs</em> 。</li>
+<li>在 <em>Visual Studio/Visual Studio for Mac</em> 中为 <em>iOS</em> 创建一个空的 <em>Binding Library(绑定库)</em>，并添加我们在 <strong>步骤4</strong> 中创建的文件。</li>
+<li><p>重新构建并检查一切正常。如果有一些错误，我们可以直接在 <em>Visual Studio/Visual Studio for Mac</em> 或文档中检查它们。</p>
 <p><img src="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220" alt="xamarin-binding-library"></p>
-<p><a href="https://medium.com/@wasihaiderdev/my-experience-writing-a-xamarin-binding-project-2d63efe90eff" target="_blank" rel="noopener">https://medium.com/@wasihaiderdev/my-experience-writing-a-xamarin-binding-project-2d63efe90eff</a></p>
-
+</li>
+</ol>
+<h2 id="绑定-Java-库"><a href="#绑定-Java-库" class="headerlink" title="绑定 Java 库"></a>绑定 Java 库</h2><p>适用于 Android 的第三方库生态系统是巨大的。 因此，通常最好使用比创建一个新的现有 Android 库。 Xamarin.Android 提供两种方法来使用这些库：<br>创建绑定库自动包装与库C#包装器，因此可以调用 Java 代码通过C#的调用。<br>使用Java 本机接口(JNI) 来直接调用 Java 库代码中的调用。 JNI 是一个编程框架，允许调用并由本机应用程序或库调用的 Java 代码。</p>
+<p><img src="https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/images/architecture.png#lightbox" alt></p>
+<h2 id="绑定-OC-库"><a href="#绑定-OC-库" class="headerlink" title="绑定 OC 库"></a>绑定 OC 库</h2><p>为 <em>Xamarin</em> 创建 <em>OC</em> 的绑定库大概为三个步骤：</p>
+<ol>
+<li>编写C#”API 定义”来描述如何本机 API 公开在.NET 中，以及它如何映射到基础 Objective-c。 这是使用标准C#构造喜欢interface和各种绑定特性(请参阅此简单示例)。</li>
+<li>一旦您编写”API 定义” C#，其生成”绑定”程序集进行编译。 这可以在命令行也可以使用绑定项目 Visual Studio for Mac 或 Visual Studio 中。</li>
+<li>该”绑定”程序集然后添加到 Xamarin 应用程序项目中，以便可以访问使用你定义的 API 的本机功能。 绑定项目是完全独立于应用程序项目。</li>
+</ol>
+<blockquote>
+<p>注意事项：<br>可以使用的帮助自动执行步骤 1 目标 Sharpie。 它会检查 Objective C API 并生成建议C#”API 定义”。 您可以自定义目标 Sharpie 创建的文件并将其绑定项目 （或在命令行上） 来创建绑定程序集。 目标 Sharpie 不会创建单独的绑定，而是只是较大过程的一个可选部分。</p>
+</blockquote>
+<h2 id="绑定-Swift-库"><a href="#绑定-Swift-库" class="headerlink" title="绑定 Swift 库"></a>绑定 Swift 库</h2><h2 id="绑定-C-C-库"><a href="#绑定-C-C-库" class="headerlink" title="绑定 C/C++ 库"></a>绑定 C/C++ 库</h2>
       
     </div>
     
@@ -544,8 +571,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Bindings/xamarin-ios-binding-oc/" rel="next" title="在 Xamarin.iOS 应用程序中使用 Objective-C 库">
-                <i class="fa fa-chevron-left"></i> 在 Xamarin.iOS 应用程序中使用 Objective-C 库
+              <a href="/xamarin/xamarin-enviorment-setup-macos/" rel="next" title="Xamarin开发(MacOS开发)环境配置">
+                <i class="fa fa-chevron-left"></i> Xamarin开发(MacOS开发)环境配置
               </a>
             
           </div>
@@ -554,8 +581,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uncategorized/xamarin-ios-binding-objectivesharpie-xcode/" rel="prev" title="xamarin-ios-binding-objectivesharpie-xcode">
-                xamarin-ios-binding-objectivesharpie-xcode <i class="fa fa-chevron-right"></i>
+              <a href="/Bindings/xamarin-ios-binding-oc/" rel="prev" title="在 Xamarin.iOS 应用程序中使用 Objective-C 库">
+                在 Xamarin.iOS 应用程序中使用 Objective-C 库 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -649,8 +676,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -741,6 +777,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从头开始还是绑定？"><span class="nav-number">1.</span> <span class="nav-text">从头开始还是绑定？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binding-步骤"><span class="nav-number">2.</span> <span class="nav-text">Binding 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-Java-库"><span class="nav-number">2.1.</span> <span class="nav-text">绑定 Java 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-OC-库"><span class="nav-number">2.2.</span> <span class="nav-text">绑定 OC 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-Swift-库"><span class="nav-number">2.3.</span> <span class="nav-text">绑定 Swift 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-C-C-库"><span class="nav-number">2.4.</span> <span class="nav-text">绑定 C/C++ 库</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -768,7 +820,7 @@
     
       <span class="post-meta-item-text">博客全站共&#58;</span>
     
-    <span title="博客全站共">7.4k 字</span>
+    <span title="博客全站共">8.2k 字</span>
   
 </div>
 

@@ -27,18 +27,18 @@
     <content type="text"></content>
   </entry>
   <entry>
-    <title><![CDATA[Xamarin 中如何使用原生 SDK]]></title>
-    <url>%2FBindings%2Fxamarin-binding-intro%2F</url>
-    <content type="text"><![CDATA[写在前面： https://medium.com/@wasihaiderdev/my-experience-writing-a-xamarin-binding-project-2d63efe90eff]]></content>
+    <title><![CDATA[xamarin-ios-objective-sharpie01]]></title>
+    <url>%2FBindings%2Fxamarin-ios-binding-objectivesharpie%2F</url>
+    <content type="text"><![CDATA[本文主要介绍我们在面对源生IOS第三方类库的时候怎么把这些第三方的控件或者SDK转化为Xamarin.IOS可用的控件或者库在APP端开发时候我们经常发现，系统提供的控件无法满足我们那欲求不满的项目总监的要求，所以我们总会根据自己的需求去重新封装自定义控件去实现我们的业务需求，而这里推荐还是自己根据原本的控件去进行重写自己封装，但是也有在Gihub上已经被大神封装好的Xamarin.IOS控件或者源生IOS的控件，此时我们也可以通过Xamarin给我们提供的工具把这些源生的IOS转化为Xamarin可使用的dll，然后在我们的项目中进行引用以及实现。这里最重要的一个工具就是Objective Sharpie，通过这个工具我们基本可以实现源生IOS内容在Xamarin.IOS的大部分实现。 目录本文详细涵盖以下主题 1、Objective Sharpie下载及安装 2、Xcode的使用教程及.a文件生成 3、.a文件的适配以及Makefile的使用 4、Objective Sharpie的使用 5、dll文件的生成与调用 Objective Sharpie下载及安装首先我们需要在Mac中或者虚拟机的Mac OS镜像中下载Objective Sharpie这个工具，注意Objective Sharpie这个工具只是在Mac OS X 10.10或者更新的系统中进行下载。(Objective Sharpie下载链接) 下载完成后会出现安装包然后一直点击下一步就能安装成功！ Xcode的使用教程及.a文件生成首先需要我们的Mac中安装Xcode6或者更高版本的Xcode，然后我们打开Xcode去建立一个静态类库(Creat A Static Library) 1、打开Xcode 2、选择File—&gt;New—&gt;Project… 3、选择建立Cocoa Touch Static Library（静态类库） 4、随便填写你的项目名称如（IOSDemo）,点击Next选择项目的保存位置，然后点击OK保存。 5、选取你要转换的源生IOS编写的控件（如我用的DOPDropDownMenu），把文件中的所有.h和.m文件添加到刚创建好的类库中 然后开始编译生成.a文件，这个.a文件就是我们可以Xamarin项目中添加建立Xamarin.IOS项目使用的类库 .a文件的适配以及Makefile的使用此时我们生成的.a文件如果直接使用，在我们模拟器开发调试过程中不会出现问题，但拿到真机开始测试时会发现报错，这个问题原因是我们没有根据Iphone不同的CPU类型生成相应的版本，所以此时我们需要使用Makefile来分别生成满足ARM 7 &amp; ARM64&amp; i386版本的.a文件。 1、首先我们打开终端，在终端中输入命令进入我们所建立类库的文件夹 2、建立Makefile文件，在终端中输入vim Makefile 3、输入以下代码 里面YOUR-PROJECT-NAME输入创建类库时候的项目名称4、输入完成后按Esc+:wq回到终端，然后输入Make，提示Build Succed成功后，会生成三个.a文件 此时的.a文件就已经生成完毕可以被我们建立的Windows下VS中的类库项目调用 Objective Sharpie的使用上面我们已经生成好的.a文件已经可以被我的类库项目调用，但是只有.a文件还是无法完整建立我们的类库文件的，此时我们还有要将.a文件使用Objective Sharpie工具进行处理，将.a文件中的Object-c语法编写的一些类或者方法属性转化为C#语言以供我们类库使用，方便我们以后调用我们自己生成的类库。 1、打开终端，输入以下命令 sharpie bind –output= –namespace= –sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h 其中–output=，中输入你要保存的文件夹名称 –namespace=，中输入被引用时命名控件名称 [iphone-os]为当前Mac中iphone系统的版本号，在终端中输入 sharpie xcode -sdks 可获取 [full-path-to-project]输入你所建立 Xcode 项目保存的全路径，然后一直找到.h文件的文件 2、生成成功后会在你的目录下出现你刚输入的文件夹名称的文件，里面有两个生成文件InfColorPicker.enums.cs和InfColorPicker.cs，这里面就是转换为C#的代码 此时我们建立类库前的准备工作就全部完成了 dll文件的生成与调用1、打开VS，建立一个新的Project 2、选择建立一个类库 3、新建两个类文件名称为ApiDefinition.cs和Structs.cs 4、然后吧刚才生成的InfColorPicker.cs里面的代码全部复制到ApiDefinition.cs中，把InfColorPicker.enums.cs里面所有的代码复制到Structs.cs中 5、开始编译，编译成功后会在bin目录下生成dll文件提供给我们Xamarin.IOS项目调用了 6、然后在Xamarin.IOS项目中添加引用，找到我们生成的dll文件的位置进行调用，然后引用命名控件即对控件进行布局使用了。 到这里Objective Sharpie这个工具就介绍完毕了，希望大家能有所收获，如果有啥问题，我们可以一起讨论。最后介绍一个我们转换完成并实现的Demo（仿美团下拉列表）]]></content>
       <categories>
         <category>Bindings</category>
       </categories>
       <tags>
         <tag>Xamarin</tag>
-        <tag>Library</tag>
-        <tag>Android</tag>
-        <tag>iOS </tag>
         <tag>Bindings</tag>
+        <tag>Xamarin.iOS</tag>
+        <tag>Tools</tag>
+        <tag>Objective-sharpie</tag>
       </tags>
   </entry>
   <entry>
@@ -56,18 +56,18 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[xamarin-ios-objective-sharpie01]]></title>
-    <url>%2FBindings%2Fxamarin-ios-binding-objectivesharpie%2F</url>
-    <content type="text"><![CDATA[本文主要介绍我们在面对源生IOS第三方类库的时候怎么把这些第三方的控件或者SDK转化为Xamarin.IOS可用的控件或者库在APP端开发时候我们经常发现，系统提供的控件无法满足我们那欲求不满的项目总监的要求，所以我们总会根据自己的需求去重新封装自定义控件去实现我们的业务需求，而这里推荐还是自己根据原本的控件去进行重写自己封装，但是也有在Gihub上已经被大神封装好的Xamarin.IOS控件或者源生IOS的控件，此时我们也可以通过Xamarin给我们提供的工具把这些源生的IOS转化为Xamarin可使用的dll，然后在我们的项目中进行引用以及实现。这里最重要的一个工具就是Objective Sharpie，通过这个工具我们基本可以实现源生IOS内容在Xamarin.IOS的大部分实现。 目录本文详细涵盖以下主题 1、Objective Sharpie下载及安装 2、Xcode的使用教程及.a文件生成 3、.a文件的适配以及Makefile的使用 4、Objective Sharpie的使用 5、dll文件的生成与调用 Objective Sharpie下载及安装首先我们需要在Mac中或者虚拟机的Mac OS镜像中下载Objective Sharpie这个工具，注意Objective Sharpie这个工具只是在Mac OS X 10.10或者更新的系统中进行下载。(Objective Sharpie下载链接) 下载完成后会出现安装包然后一直点击下一步就能安装成功！ Xcode的使用教程及.a文件生成首先需要我们的Mac中安装Xcode6或者更高版本的Xcode，然后我们打开Xcode去建立一个静态类库(Creat A Static Library) 1、打开Xcode 2、选择File—&gt;New—&gt;Project… 3、选择建立Cocoa Touch Static Library（静态类库） 4、随便填写你的项目名称如（IOSDemo）,点击Next选择项目的保存位置，然后点击OK保存。 5、选取你要转换的源生IOS编写的控件（如我用的DOPDropDownMenu），把文件中的所有.h和.m文件添加到刚创建好的类库中 然后开始编译生成.a文件，这个.a文件就是我们可以Xamarin项目中添加建立Xamarin.IOS项目使用的类库 .a文件的适配以及Makefile的使用此时我们生成的.a文件如果直接使用，在我们模拟器开发调试过程中不会出现问题，但拿到真机开始测试时会发现报错，这个问题原因是我们没有根据Iphone不同的CPU类型生成相应的版本，所以此时我们需要使用Makefile来分别生成满足ARM 7 &amp; ARM64&amp; i386版本的.a文件。 1、首先我们打开终端，在终端中输入命令进入我们所建立类库的文件夹 2、建立Makefile文件，在终端中输入vim Makefile 3、输入以下代码 里面YOUR-PROJECT-NAME输入创建类库时候的项目名称4、输入完成后按Esc+:wq回到终端，然后输入Make，提示Build Succed成功后，会生成三个.a文件 此时的.a文件就已经生成完毕可以被我们建立的Windows下VS中的类库项目调用 Objective Sharpie的使用上面我们已经生成好的.a文件已经可以被我的类库项目调用，但是只有.a文件还是无法完整建立我们的类库文件的，此时我们还有要将.a文件使用Objective Sharpie工具进行处理，将.a文件中的Object-c语法编写的一些类或者方法属性转化为C#语言以供我们类库使用，方便我们以后调用我们自己生成的类库。 1、打开终端，输入以下命令 sharpie bind –output= –namespace= –sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h 其中–output=，中输入你要保存的文件夹名称 –namespace=，中输入被引用时命名控件名称 [iphone-os]为当前Mac中iphone系统的版本号，在终端中输入 sharpie xcode -sdks 可获取 [full-path-to-project]输入你所建立 Xcode 项目保存的全路径，然后一直找到.h文件的文件 2、生成成功后会在你的目录下出现你刚输入的文件夹名称的文件，里面有两个生成文件InfColorPicker.enums.cs和InfColorPicker.cs，这里面就是转换为C#的代码 此时我们建立类库前的准备工作就全部完成了 dll文件的生成与调用1、打开VS，建立一个新的Project 2、选择建立一个类库 3、新建两个类文件名称为ApiDefinition.cs和Structs.cs 4、然后吧刚才生成的InfColorPicker.cs里面的代码全部复制到ApiDefinition.cs中，把InfColorPicker.enums.cs里面所有的代码复制到Structs.cs中 5、开始编译，编译成功后会在bin目录下生成dll文件提供给我们Xamarin.IOS项目调用了 6、然后在Xamarin.IOS项目中添加引用，找到我们生成的dll文件的位置进行调用，然后引用命名控件即对控件进行布局使用了。 到这里Objective Sharpie这个工具就介绍完毕了，希望大家能有所收获，如果有啥问题，我们可以一起讨论。最后介绍一个我们转换完成并实现的Demo（仿美团下拉列表）]]></content>
+    <title><![CDATA[Xamarin 中能否使用原生 SDK]]></title>
+    <url>%2FBindings%2Fxamarin-binding-intro%2F</url>
+    <content type="text"><![CDATA[写在前面： 从头开始还是绑定？使用Xamarin，在编写SDK时通常有两种选择。您可以从理想情况下开始使用足够通用的PCL项目来定位所有平台，或者您可以创建一个绑定项目，该项目基本上将本机库“包装”在C＃API中。 如果你的SDK不能访问任何原生功能（或者很少），你可能更好的只是创建PCL PCL还可以为标准iOS，Android和UWP之外的其他平台提供更大的灵活性。 在我们的例子中，由于我们依赖于许多底层本机API（例如围绕安装跟踪），我们决定采用绑定方法。 Binding 步骤在 Xamarin 中使用第三方 SDK 的大概步骤： 使用原生构建 .jar/.aar(用于Java绑定) 和 .a/.framework(用于OC/Swift绑定) 文件。 友情提示：这里可以 clone or copy Java, OC, Swift 代码自己构建，或者直接使用第三方已经生成好的 .jar/.aar 和 .a/.framework 在 Visual Studio/Visual Studio for Mac 中为 Android 创建一个空的 Binding Library(绑定库) 并添加 .jar/.aar, Mono 框架将尽可能多为我们创建 C＃ 类。 为 iOS 创建一个 Fat library(完整架构库), 它应该包含 x86 和 arm 体系结构。 使用 Objective Sharpie(sharpie bind) 为iOS自动生成C＃类。我们可以从 Pod 自动创建 或.h文件 手动生成它们 。此命令将创建两个文件：ApiDefinitions.cs 和 StrucsAndEnums.cs 。 在 Visual Studio/Visual Studio for Mac 中为 iOS 创建一个空的 Binding Library(绑定库)，并添加我们在 步骤4 中创建的文件。 重新构建并检查一切正常。如果有一些错误，我们可以直接在 Visual Studio/Visual Studio for Mac 或文档中检查它们。 绑定 Java 库适用于 Android 的第三方库生态系统是巨大的。 因此，通常最好使用比创建一个新的现有 Android 库。 Xamarin.Android 提供两种方法来使用这些库：创建绑定库自动包装与库C#包装器，因此可以调用 Java 代码通过C#的调用。使用Java 本机接口(JNI) 来直接调用 Java 库代码中的调用。 JNI 是一个编程框架，允许调用并由本机应用程序或库调用的 Java 代码。 绑定 OC 库为 Xamarin 创建 OC 的绑定库大概为三个步骤： 编写C#”API 定义”来描述如何本机 API 公开在.NET 中，以及它如何映射到基础 Objective-c。 这是使用标准C#构造喜欢interface和各种绑定特性(请参阅此简单示例)。 一旦您编写”API 定义” C#，其生成”绑定”程序集进行编译。 这可以在命令行也可以使用绑定项目 Visual Studio for Mac 或 Visual Studio 中。 该”绑定”程序集然后添加到 Xamarin 应用程序项目中，以便可以访问使用你定义的 API 的本机功能。 绑定项目是完全独立于应用程序项目。 注意事项：可以使用的帮助自动执行步骤 1 目标 Sharpie。 它会检查 Objective C API 并生成建议C#”API 定义”。 您可以自定义目标 Sharpie 创建的文件并将其绑定项目 （或在命令行上） 来创建绑定程序集。 目标 Sharpie 不会创建单独的绑定，而是只是较大过程的一个可选部分。 绑定 Swift 库绑定 C/C++ 库]]></content>
       <categories>
         <category>Bindings</category>
       </categories>
       <tags>
         <tag>Xamarin</tag>
+        <tag>Library</tag>
+        <tag>Android</tag>
+        <tag>iOS </tag>
         <tag>Bindings</tag>
-        <tag>Xamarin.iOS</tag>
-        <tag>Tools</tag>
-        <tag>Objective-sharpie</tag>
       </tags>
   </entry>
   <entry>
