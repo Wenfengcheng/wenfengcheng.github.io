@@ -17,8 +17,8 @@
         <tag>Bindings</tag>
         <tag>Xamarin.iOS</tag>
         <tag>Tools</tag>
-        <tag>Objective-sharpie</tag>
         <tag>Cocopods</tag>
+        <tag>Objective-sharpie</tag>
       </tags>
   </entry>
   <entry>
@@ -68,32 +68,6 @@
         <tag>Xamarin.iOS</tag>
         <tag>Tools</tag>
         <tag>Objective-sharpie</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Xamarin开发(MacOS开发)环境配置]]></title>
-    <url>%2FXamarin%2Fxamarin-enviorment-setup-macos%2F</url>
-    <content type="text"><![CDATA[写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 MacOS 上的环境搭建，对于 Windows 上的开发环境配置可以参考 Xamarin开发(Windows开发)环境配置 查看详细介绍，相对 Windows 来说, 在 MacOS 上 Xamarin 的环境搭建相对简单很多，安装一个 Xcode, 以及 VS For Mac 就能搞定，当然其中也有一些坑的地方。 安装开发工具Xcode安装或更新 Xcode 最新版本 打开 App Store，搜索 Xcode，点击安装 注意事项： 运行的Mac的环境需要 macOS Sierra 10.12 或更高版本的 Mac Xcode 8.3 或更高版本。 通常建议使用稳定的最新版本 一个 Apple ID。 如果没有 Apple ID，请在 Apple官网 新建一个。需要 Apple ID 才可安装和登录 Xcode VS For Mac安装 Visual Studio for Mac 下载安装包后，单击 VisualStudioInstaller.dmg 文件装载安装程序，然后通过双击徽标运行它，如下图所示： 系统可能会通过警报对话框发出提示，如下图所示。 在此情况下，点击 Open 安装程序会检查系统，确定需要安装或更新的组件： 之后，会出现一个警报对话框，要求确认隐私和许可条款。 按“继续”按钮接受条款： 安装程序会列出缺少和需要下载并安装的所需组件。 在此处选择要下载的产品： 友情提示：如果你不想在 Mac 上开发调试 Android 和 .NET Core 应用程序，可以不勾选相应的安装选项。 此安装屏幕显示每个组件的版本和大小。 可单击每个组件查看该组件的依赖项列表（对于 Android ），该组件下载的其他包（对于 .NET Core ），或任何其他所需应用程序（对于 iOS 和 macOS ）： 确认选择后，选择“安装和更新”按钮开始安装过程。 安装成功后，可通过按 Start，开始在 Visual Studio for Mac 中开发应用： 注意事项： 在安装 Android 的 SDK 过程中，可能会遇到一直下载失败的情况，由于国内墙的问题，可以连接代理。 详细安装步骤请查看 官方文档 与 Mac 配对启用 Mac 上的远程登录 在 Mac 上，打开 系统首选项 并转到 共享 窗格。 选中 服务 列表中的 远程登录。 从 Visual Studio 2017 连接到 Mac 在 Visual Studio 2017 中，打开现有的 iOS 项目，或者通过选择 File &gt; New &gt; Project，然后选择 iOS 项目模板来创建新的 iOS 项目。 点击工具栏上 与 Mac 配对 按钮 与 Mac 配对 对话框显示所有之前连接的和当前可用的 Mac 生成主机的列表： 选择列表中的 Mac，单击 Connect 输入用户名和密码(首次连接到某特定 Mac ) 注意事项： 当 Mac 和 PC 在同一局域网内时，当前 Mac 会自动显示在列表中，当没有时可以 手动添加 Mac 检查 Windows 中 Xamarin iOS 版本号 是否 Mac 中保持一致 (这里的一致为大版本一致如：Windwos 11.6.1.4 与 Mac Xamarin.iOS 11.6.1.2 可认为保持一致), 如果不一致会导致无法匹配成功 从 Visual Studio 2017 15.6 开始，与 Mac 配对 会自动使用生成 Xamarin.iOS 应用程序所需的软件 Mono、Xamarin.iOS（软件框架，而不是 Visual Studio for Mac IDE） 以及各种与 Xcode 相关的工具（而不是 Xcode 自身）来预配 Mac。详细介绍请查看 自动预配 Mac]]></content>
-      <categories>
-        <category>Xamarin</category>
-      </categories>
-      <tags>
-        <tag>Xamarin</tag>
-        <tag>MacOS</tag>
-        <tag>enviorment-setup</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Xamarin开发(Windows开发)环境配置]]></title>
-    <url>%2FXamarin%2Fxamarin-enviorment-setup-windows%2F</url>
-    <content type="text"><![CDATA[写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置 查看详细介绍，相对 Mac 来说, 在 Windows 上 Xamarin 的环境搭建相对麻烦很多，而且其中需要注意的点也非常多。 安装 Visual Studio 2017 搭建 Xamarin 开发环境准备工作在 Visual Studio 2017 中安装 Xamarin 需要以下项： Windows 7 或更高版本 Visual Studio 2017 Community / Professional / Enterprise 根据不同类型的 对比 选择相应的 Visual Studio 版本 Xamarin for Visual Studio 注意事项：有关安装和使用 Xamarin 的先决条件的详细信息，请参阅 Windwos系统要求 和 MacOS系统要求 开始安装 从 Visual Studio 页面下载 Visual Studio 2017 Community、 Visual Studio Professional 或 Visual Studio Enterprise 这里以 VS2017企业版 为例，双击打开下载的安装包： 在安装页面上选择 Mobile development with .NET 选项： 查看右边 Summary 菜单，选择或取消某些特定的安装选项，默认选项如下： 选择完成后点击右下角 Install 按钮，开始安装： 安装完毕后点击 Launch 打开 VS2017 注意事项:对于右侧可选的安装选项，直接保持系统推荐默认的安装项安装即可。 安装完成后，点击 Launch 进入欢迎页,登录你的账号，或者跳过这一步，选择你喜欢的主题之后 启动VisualStudio 注意事项:详细步骤介绍可以查看 官方安装文档 验证 Xamarin 环境 在 Visual Studio 2017 中，可通过单击 Help(帮助) 菜单来验证是否安装了 Xamarin。 如果安装了 Xamarin，应该看到 Xamarin 菜单项，如此屏幕截图所示： 同样也可单击 Help(帮助) &gt; About Microsoft Visual Studio ，滚动浏览已安装的产品列表，查看是否已安装 Xamarin 以及相应的版本信息： 注意事项:有关查找版本信息的详细信息:请参阅 Where can I find my version information and logs? (在何处可找到我的版本信息和日志). Xamarin Android Configuration配置Xamarin.Android 使用 Java 开发工具包 (JDK) 和 Android SDK 生成应用。 在安装过程中，Visual Studio 安装程序会将这些工具放置在其默认位置，并使用适当的路径来配置开发环境。 可单击 Tools &gt; Options… &gt; Xamarin &gt; Android Settings 查看和更改这些位置： 注意事项：对于大多数用户，在安装完成后，默认位置会自动配置完成并起作用，无需进行进一步更改。 但是，如果系统并没有自动检测到默认位置，或你可能希望将 Visual Studio 配置为这些工具的自定义位置（例如：你已在其他位置安装了 Java JDK、 Android SDK 或 NDK）。 单击要更改的路径旁边的 Change，然后导航到新位置。 Android SDK ManagerAndroid 使用多个 Android API Level Settings 来确定应用在各种 Android 版本中的兼容性（有关 Android API Level 的详细信息，请参阅了解 Android API Level）。这里我们可能需要通过 Android SDK Manager 下载和安装其他 Android SDK 组件。 点击 Visual Studio 的 Tools 选项，在 Android 项中,选择 Android SDK Manager 如图： 选择 Tools 选项下勾选要求的 Android 工具项，如图： 勾选之后，点击 Apply Changes 之后，等待安装成功就OK了。 详细内容介绍请查看 官方文档 Xamarin Android Device ManagerXamarin Android Device Manager 可以创建和配置 Android 虚拟设备 (AVD)，在这里我们可以创建 Android 模拟器方便调试开发。 注意事项：若要使用 Android Device Manager，需要具备以下各项： 需要 Visual Studio 2017 版本 15.7 或更高版本。 支持 Visual Studio Community、Professional 和 Enterprise 版本。 Visual Studio Tools for Xamarin 版本 4.9 或更高版本。 必须安装 Android SDK（请参阅 设置用于 Xamarin.Android 的 Android SDK），并且必须安装 SDK 工具版本 26.1.1 或更高版本。(如果尚未安装请安装到以下路径中：C:\Program Files (x86)\Android\android-sdk。) 默认情况下会自动选择 Xamarin Device Manage，如果没有此选项，可以返回 VS Installer 中拓展安装，或者使用下载方式安装： Windows 环境点击下载 Xamarin Device Manager 双击 Xamarin.DeviceManager.msi，安装管理器 安装完成后通过单击 “ Tools ” &gt; “ Android ” &gt; “ Android Device Manager ”: 点击右上角 New 进入到添加页面，之后点击 Create 创建模拟器: 完成后就可以新建一个 Xamarin.Forms 或者 Xamarin.Android 项目选择刚才新建的模拟器进行调试运行，检查环境安装是否完整。 Xamarin iOS Configuration设置 MacOS 主机在 Windwos 中进行 iOS 应用程序的开发时，需要准备一个 MacOS 作为你的调试终端，从而编译和调试你的应用程序。要生成、调试 iOS 应用程序以及对其进行签名以进行分发，Visual Studio 2017 必须能够通过网络访问已经配置了 Apple 开发人员工具 (Xcode) 和 Xamarin.iOS 的 Mac 主机。详细 Xamarin.iOS 的开发环境配置可以查看 Xamarin开发(Mac开发)环境搭建 查看详细介绍。 注意事项:如果不想安装 Visual Studio for Mac，从 Visual Studio 2017 15.6 版本 开始，Visual Studio 2017 会自动生成 Xamarin.iOS 应用程序所需的软件 Mono、Xamarin.iOS（软件框架，而不是 Visual Studio for Mac IDE） 以及各种与 Xcode 相关的工具（而不是 Xcode 自身）来预配 Mac。 有关详细信息，请参阅自动预配 Mac。 将 Visual Studio 2017 连接到 MacVisual Studio 2017 的 与 Mac 配对 功能会发现、连接到 Mac 生成主机、对其进行验证并记住生成主机，以便基于 Windows 的 iOS 开发人员能够高效工作。 启用 Mac 上的远程登录若要设置 Mac 生成主机，首先启用远程登录： 在 Mac 上，打开 系统首选项 并转到 共享 窗格。 选中 服务 列表中的 远程登录。 确保 远程登录 配置为 允许所有用户 访问，或确保 Mac 用户名或组包含在允许用户列表中。 如果和 Windows 计算机位于同一局域网内，则 Visual Studio 2017 会自动识别到 Mac。 如果仍无法发现 Mac，请尝试 手动添加 Mac 或查看 疑难解答指南。 从 Visual Studio 2017 连接到 Mac启用远程连接后，将 Visual Studio 2017 连接到 Mac。 在 Visual Studio 2017 中，打开现有的 iOS 项目，或者通过选择 文件 &gt; 新建 &gt; 项目，然后选择 iOS 项目模板来创建新的 iOS 项目。 打开 与 Mac配对 对话框。 使用 与 Mac配对 按钮 iOS 工具栏： 或者，选择 工具 &gt; iOS &gt; 与 Mac配对。 与 Mac配对 对话框显示所有之前连接的和当前可用的 Mac 生成主机的列表： 选择列表中的 Mac。 单击 连接 输入用户名和密码。 第一次连接到某特定 Mac 时，会提示为该计算机输入用户名和密码： -与 Mac配对 使用这些凭据创建到 Mac 的新 SSH 连接。 如果成功，会向 Mac 上的 authorized_keys 文件中添加一个密钥。 以后连接该 Mac 时会自动登录。 注意事项：登录时，使用系统用户名而不是全名。 详细 与 Mac配对 教程可以查看官方文档 通过“与 Mac 配对”进行 Xamarin.iOS 开发。]]></content>
-      <categories>
-        <category>Xamarin</category>
-      </categories>
-      <tags>
-        <tag>Xamarin</tag>
-        <tag>enviorment-setup</tag>
-        <tag>Windows</tag>
       </tags>
   </entry>
 </search>
