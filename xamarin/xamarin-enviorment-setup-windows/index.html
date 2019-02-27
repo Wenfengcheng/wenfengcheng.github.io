@@ -119,7 +119,7 @@
 
 
 
-  <meta name="keywords" content="Xamarin,Library,Android,iOS ,Bindings,">
+  <meta name="keywords" content="xamarin,enviorment-setup,Windows,">
 
 
 
@@ -130,20 +130,40 @@
 
 
 
-<meta name="description" content="写在前面：">
-<meta name="keywords" content="Xamarin,Library,Android,iOS ,Bindings">
+<meta name="description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
+<meta name="keywords" content="xamarin,enviorment-setup,Windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xamarin 中如何使用原生 SDK">
-<meta property="og:url" content="https://wenfengcheng.github.io/Bindings/xamarin-binding-intro/index.html">
+<meta property="og:title" content="Xamarin开发(Windows开发)环境配置">
+<meta property="og:url" content="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-windows/index.html">
 <meta property="og:site_name" content="Funky_Xamarin&#39;s Blog">
-<meta property="og:description" content="写在前面：">
+<meta property="og:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
-<meta property="og:updated_time" content="2019-02-26T09:01:27.232Z">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-cb16db68fe8fe4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-80853d822c2dede1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-ecea518dbaec3b5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-f7f9f4e3cf7a170c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-1d2de6e458214d67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-380a4e2bce1e1b16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-3b4e571cc1b9f859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-b13531a80d9c4441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-4ae8507b9afe0b48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-8b25a99e4a45cabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-ec39e8f51e3d83db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-239b9640e6729534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-d846f16555ffd75b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-248f6be30509cdf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-109bb840102d52aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-3ae0bfbca8720927.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-e9c19e6acc32c712.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/sharing.png">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/ios-toolbar.png">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/pairtomac.png">
+<meta property="og:image" content="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/auth.png">
+<meta property="og:updated_time" content="2019-02-27T05:00:24.425Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xamarin 中如何使用原生 SDK">
-<meta name="twitter:description" content="写在前面：">
-<meta name="twitter:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
+<meta name="twitter:title" content="Xamarin开发(Windows开发)环境配置">
+<meta name="twitter:description" content="写在前面：最近在整理之前写的博客的时候，发现对于 Xamarin 环境开发配置的内容还停留在 VS 2015 以及 Xamarin Studio 的阶段，最近把 Xamarin 环境搭建的文章进行了一次完整的更新，本文将主要介绍 Windows 上的环境搭建，对于 Mac 上的开发环境配置可以参考 Xamarin开发(Mac开发)环境配置  查看详细介绍，相对 Mac 来说, 在 Windows">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4421101-cb16db68fe8fe4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -173,13 +193,13 @@
 
 
 
-  <link rel="canonical" href="https://wenfengcheng.github.io/Bindings/xamarin-binding-intro/">
+  <link rel="canonical" href="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-windows/">
 
 
 
 
 
-  <title>Xamarin 中如何使用原生 SDK | Funky_Xamarin's Blog</title>
+  <title>Xamarin开发(Windows开发)环境配置 | Funky_Xamarin's Blog</title>
   
 
 
@@ -348,7 +368,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://wenfengcheng.github.io/Bindings/xamarin-binding-intro/">
+    <link itemprop="mainEntityOfPage" href="https://wenfengcheng.github.io/xamarin/xamarin-enviorment-setup-windows/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Funky_Xamarin">
@@ -365,7 +385,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Xamarin 中如何使用原生 SDK</h1>
+          <h1 class="post-title" itemprop="name headline">Xamarin开发(Windows开发)环境配置</h1>
         
 
         <div class="post-meta">
@@ -381,8 +401,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-26T17:01:27+08:00">
-                2019-02-26
+              <time title="更新于" itemprop="dateModified" datetime="2019-02-27T13:00:24+08:00">
+                2019-02-27
               </time>
             
           </span>
@@ -400,8 +420,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Bindings/" itemprop="url" rel="index">
-                    <span itemprop="name">Bindings</span>
+                  <a href="/categories/xamarin/" itemprop="url" rel="index">
+                    <span itemprop="name">xamarin</span>
                   </a>
                 </span>
 
@@ -418,8 +438,8 @@
                 <span class="post-meta-item-icon">
                   <i class="fa fa-comment-o"></i>
                 </span>
-                <a href="/Bindings/xamarin-binding-intro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/Bindings/xamarin-binding-intro/" itemprop="commentCount"></span>
+                <a href="/xamarin/xamarin-enviorment-setup-windows/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/xamarin/xamarin-enviorment-setup-windows/" itemprop="commentCount"></span>
                 </a>
               </span>
             
@@ -427,7 +447,7 @@
 
           
           
-             <span id="/Bindings/xamarin-binding-intro/" class="leancloud_visitors" data-flag-title="Xamarin 中如何使用原生 SDK">
+             <span id="/xamarin/xamarin-enviorment-setup-windows/" class="leancloud_visitors" data-flag-title="Xamarin开发(Windows开发)环境配置">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +472,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  16
+                  1.9k
                 </span>
               
 
@@ -468,7 +488,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  1 分钟
+                  7 分钟
                 </span>
               
             </div>
@@ -490,11 +510,154 @@
 
       
         <blockquote>
-<p>写在前面：</p>
+<p>写在前面：<br>最近在整理之前写的博客的时候，发现对于 <em>Xamarin</em> 环境开发配置的内容还停留在 <em>VS 2015</em> 以及 <em>Xamarin Studio</em> 的阶段，最近把 <em>Xamarin</em> 环境搭建的文章进行了一次完整的更新，本文将主要介绍 <strong>Windows</strong> 上的环境搭建，对于 <strong>Mac</strong> 上的开发环境配置可以参考 <a href="/xamarin/xamarin-enviorment-setup-macos">Xamarin开发(Mac开发)环境配置</a>  查看详细介绍，相对 <strong>Mac</strong> 来说, 在 <strong>Windows</strong> 上 <em>Xamarin</em> 的环境搭建相对麻烦很多，而且其中需要注意的点也非常多。</p>
 </blockquote>
 <a id="more"></a>
-<p><img src="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220" alt="xamarin-binding-library"></p>
-<p><a href="https://medium.com/@wasihaiderdev/my-experience-writing-a-xamarin-binding-project-2d63efe90eff" target="_blank" rel="noopener">https://medium.com/@wasihaiderdev/my-experience-writing-a-xamarin-binding-project-2d63efe90eff</a></p>
+<h1 id="安装-Visual-Studio-2017-搭建-Xamarin-开发环境"><a href="#安装-Visual-Studio-2017-搭建-Xamarin-开发环境" class="headerlink" title="安装 Visual Studio 2017 搭建 Xamarin 开发环境"></a>安装 Visual Studio 2017 搭建 Xamarin 开发环境</h1><h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><p>在 Visual Studio 2017 中安装 Xamarin 需要以下项：</p>
+<ul>
+<li><p>Windows 7 或更高版本</p>
+</li>
+<li><p>Visual Studio 2017</p>
+<blockquote>
+<p><a href="https://www.visualstudio.com/zh-hans/thank-you-downloading-visual-studio/?sku=Community&amp;rel=15" target="_blank" rel="noopener"><strong>Community</strong></a> / <a href="https://www.visualstudio.com/zh-hans/thank-you-downloading-visual-studio/?sku=Professional&amp;rel=15" target="_blank" rel="noopener"><strong>Professional</strong></a> / <a href="https://www.visualstudio.com/zh-hans/thank-you-downloading-visual-studio/?sku=Enterprise&amp;rel=15" target="_blank" rel="noopener"><strong>Enterprise</strong></a> 根据不同类型的 <a href="https://www.visualstudio.com/zh-hans/vs/compare/" target="_blank" rel="noopener"><strong>对比</strong></a> 选择相应的 <em>Visual Studio</em> 版本</p>
+</blockquote>
+</li>
+<li>Xamarin for Visual Studio</li>
+</ul>
+<blockquote>
+<p>注意事项：<br>有关安装和使用 <em>Xamarin</em> 的先决条件的详细信息，请参阅 <a href="https://docs.microsoft.com/zh-cn/xamarin/cross-platform/get-started/requirements#windows-requirements" target="_blank" rel="noopener">Windwos系统要求</a> 和 <a href="https://docs.microsoft.com/zh-cn/xamarin/cross-platform/get-started/requirements#macos-requirements" target="_blank" rel="noopener">MacOS系统要求</a></p>
+</blockquote>
+<h2 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h2><ul>
+<li><p>从 <a href="https://visualstudio.microsoft.com/zh-hans/vs" target="_blank" rel="noopener"><strong>Visual Studio</strong></a> 页面下载 <em>Visual Studio 2017 Community</em>、 <em>Visual Studio Professional</em> 或 <em>Visual Studio Enterprise</em></p>
+</li>
+<li><p>这里以 <em>VS2017企业版</em> 为例，双击打开下载的安装包：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-cb16db68fe8fe4d7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Vs_Setup.png"></p>
+</li>
+</ul>
+<ul>
+<li><p>在安装页面上选择 <strong>Mobile development with .NET</strong> 选项：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-80853d822c2dede1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Xamarin_Setup.png"></p>
+</li>
+<li><p>查看右边 <em>Summary</em> 菜单，选择或取消某些特定的安装选项，默认选项如下：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-ecea518dbaec3b5a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Xamarin_Setup1.png"></p>
+</li>
+<li><p>选择完成后点击右下角 <strong>Install</strong> 按钮，开始安装：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-f7f9f4e3cf7a170c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Xamarin_Install.png"></p>
+</li>
+<li><p>安装完毕后点击 <em>Launch</em> 打开 <em>VS2017</em></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-1d2de6e458214d67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Vs_Launch.png"></p>
+</li>
+</ul>
+<blockquote>
+<p>注意事项:<br>对于右侧可选的安装选项，直接保持系统推荐默认的安装项安装即可。</p>
+</blockquote>
+<ul>
+<li><p>安装完成后，点击 <strong>Launch</strong> 进入欢迎页,登录你的账号，或者跳过这一步，选择你喜欢的主题之后 <strong>启动VisualStudio</strong></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-380a4e2bce1e1b16.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Start1.png"></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-3b4e571cc1b9f859.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="Start2.png"></p>
+</li>
+</ul>
+<blockquote>
+<p>注意事项:<br>详细步骤介绍可以查看 <a href="https://docs.microsoft.com/zh-cn/xamarin/cross-platform/get-started/installation/windows" target="_blank" rel="noopener">官方安装文档</a></p>
+</blockquote>
+<h2 id="验证-Xamarin-环境"><a href="#验证-Xamarin-环境" class="headerlink" title="验证 Xamarin 环境"></a>验证 Xamarin 环境</h2><ul>
+<li><p>在 <em>Visual Studio 2017</em> 中，可通过单击 <strong>Help(帮助)</strong> 菜单来验证是否安装了 <em>Xamarin</em>。 如果安装了 <em>Xamarin</em>，应该看到 <em>Xamarin</em> 菜单项，如此屏幕截图所示：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-b13531a80d9c4441.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="check_vs01.png"></p>
+</li>
+<li><p>同样也可单击 <strong>Help(帮助)</strong> &gt; <strong>About Microsoft Visual Studio </strong>，滚动浏览已安装的产品列表，查看是否已安装 <em>Xamarin</em> 以及相应的版本信息：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-4ae8507b9afe0b48.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt="check_vs02.png"></p>
+</li>
+</ul>
+<blockquote>
+<p>注意事项:<br>有关查找版本信息的详细信息:<br>请参阅 <a href="https://docs.microsoft.com/zh-cn/xamarin/cross-platform/troubleshooting/questions/version-logs" target="_blank" rel="noopener">Where can I find my version information and logs?</a> (在何处可找到我的版本信息和日志).</p>
+</blockquote>
+<h1 id="Xamarin-Android-Configuration"><a href="#Xamarin-Android-Configuration" class="headerlink" title="Xamarin Android Configuration"></a>Xamarin Android Configuration</h1><h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p><em>Xamarin.Android</em> 使用 <strong>Java 开发工具包 (JDK)</strong> 和 <strong>Android SDK</strong> 生成应用。 在安装过程中，<em>Visual Studio</em> 安装程序会将这些工具放置在其默认位置，并使用适当的路径来配置开发环境。 可单击 <strong>Tools</strong> &gt; <strong>Options…</strong> &gt; <strong>Xamarin</strong> &gt; <strong>Android Settings</strong> 查看和更改这些位置：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-8b25a99e4a45cabc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<blockquote>
+<p>注意事项：<br>对于大多数用户，在安装完成后，默认位置会自动配置完成并起作用，无需进行进一步更改。 但是，如果系统并没有自动检测到默认位置，或你可能希望将 <em>Visual Studio</em> 配置为这些工具的自定义位置（例如：你已在其他位置安装了 <em>Java JDK</em>、 <em>Android SDK</em> 或 <em>NDK</em>）。 单击要更改的路径旁边的 <strong>Change</strong>，然后导航到新位置。</p>
+</blockquote>
+<h2 id="Android-SDK-Manager"><a href="#Android-SDK-Manager" class="headerlink" title="Android SDK Manager"></a>Android SDK Manager</h2><p><strong>Android</strong> 使用多个 <em>Android API Level Settings</em> 来确定应用在各种 <strong>Android</strong> 版本中的兼容性（有关 <em>Android API Level</em> 的详细信息，请参阅<a href="https://docs.microsoft.com/zh-cn/xamarin/android/app-fundamentals/android-api-levels?tabs=vswin" target="_blank" rel="noopener">了解 Android API Level</a>）。这里我们可能需要通过 <strong>Android SDK Manager</strong> 下载和安装其他 <em>Android SDK</em> 组件。</p>
+<ul>
+<li><p>点击 <strong>Visual Studio</strong> 的 <strong>Tools</strong> 选项，在 <strong>Android</strong> 项中,选择 <strong>Android SDK Manager</strong> 如图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-ec39e8f51e3d83db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+</li>
+</ul>
+<ul>
+<li><p>选择 <strong>Tools</strong> 选项下勾选要求的 <strong>Android</strong> 工具项，如图：</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-239b9640e6729534.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-d846f16555ffd75b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+</li>
+</ul>
+<ul>
+<li>勾选之后，点击 <strong>Apply Changes</strong> 之后，等待安装成功就OK了。</li>
+</ul>
+<blockquote>
+<p>详细内容介绍请查看 <a href="https://docs.microsoft.com/zh-cn/xamarin/android/get-started/installation/android-sdk?ide=vs&amp;tabs=vswin" target="_blank" rel="noopener">官方文档</a></p>
+</blockquote>
+<h2 id="Xamarin-Android-Device-Manager"><a href="#Xamarin-Android-Device-Manager" class="headerlink" title="Xamarin Android Device Manager"></a>Xamarin Android Device Manager</h2><p>Xamarin Android Device Manager 可以创建和配置 Android 虚拟设备 (AVD)，在这里我们可以创建 Android 模拟器方便调试开发。</p>
+<blockquote>
+<p>注意事项：<br>若要使用 Android Device Manager，需要具备以下各项：</p>
+<ul>
+<li>需要 Visual Studio 2017 版本 15.7 或更高版本。 支持 Visual Studio Community、Professional 和 Enterprise 版本。</li>
+<li>Visual Studio Tools for Xamarin 版本 4.9 或更高版本。</li>
+<li>必须安装 Android SDK（请参阅 <a href="https://docs.microsoft.com/zh-cn/xamarin/android/get-started/installation/android-sdk" target="_blank" rel="noopener">设置用于 Xamarin.Android 的 Android SDK</a>），并且必须安装 SDK 工具版本 26.1.1 或更高版本。<br><em>(如果尚未安装请安装到以下路径中：C:\Program Files (x86)\Android\android-sdk。)</em></li>
+</ul>
+</blockquote>
+<p>默认情况下会自动选择 Xamarin Device Manage，如果没有此选项，可以返回 VS Installer 中拓展安装，或者使用下载方式安装：</p>
+<ol>
+<li><p><strong>Windows</strong> 环境点击下载 <a href="https://go.microsoft.com/fwlink/?linkid=865528" target="_blank" rel="noopener">Xamarin Device Manager </a></p>
+</li>
+<li><p>双击 <strong>Xamarin.DeviceManager.msi</strong>，安装管理器</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-248f6be30509cdf0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+</li>
+</ol>
+<p>安装完成后通过单击 “ Tools ” &gt; “ Android ” &gt; “ Android Device Manager ”:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-109bb840102d52aa.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>点击右上角 <strong>New</strong> 进入到添加页面，之后点击 <strong>Create</strong> 创建模拟器:</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-3ae0bfbca8720927.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-e9c19e6acc32c712.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+<p>完成后就可以新建一个 Xamarin.Forms 或者 Xamarin.Android 项目选择刚才新建的模拟器进行调试运行，检查环境安装是否完整。</p>
+<h1 id="Xamarin-iOS-Configuration"><a href="#Xamarin-iOS-Configuration" class="headerlink" title="Xamarin iOS Configuration"></a>Xamarin iOS Configuration</h1><h2 id="设置-MacOS-主机"><a href="#设置-MacOS-主机" class="headerlink" title="设置 MacOS 主机"></a>设置 MacOS 主机</h2><p>在 <em>Windwos</em> 中进行 <em>iOS</em> 应用程序的开发时，需要准备一个 <em>MacOS</em> 作为你的调试终端，从而编译和调试你的应用程序。要生成、调试 <em>iOS</em> 应用程序以及对其进行签名以进行分发，<em>Visual Studio 2017</em> 必须能够通过网络访问已经配置了 <em>Apple 开发人员工具 (Xcode)</em> 和 <em>Xamarin.iOS</em> 的 <em>Mac</em> 主机。详细 <em>Xamarin.iOS</em> 的开发环境配置可以查看 <a href="https://www.jianshu.com/p/abb9ae9df631" target="_blank" rel="noopener">Xamarin开发(Mac开发)环境搭建</a> 查看详细介绍。</p>
+<blockquote>
+<p>注意事项:<br>如果不想安装 <em>Visual Studio for Mac</em>，从 <em>Visual Studio 2017 15.6 版本</em> 开始，<em>Visual Studio 2017</em> 会自动生成 <em>Xamarin.iOS</em> 应用程序所需的软件 <em>Mono、Xamarin.iOS（软件框架，而不是 Visual Studio for Mac IDE）</em> 以及各种与 <em>Xcode</em> 相关的工具（而不是 <em>Xcode</em> 自身）来预配 <em>Mac</em>。 有关详细信息，请参阅自动预配 <em>Mac</em>。</p>
+</blockquote>
+<h2 id="将-Visual-Studio-2017-连接到-Mac"><a href="#将-Visual-Studio-2017-连接到-Mac" class="headerlink" title="将 Visual Studio 2017 连接到 Mac"></a>将 Visual Studio 2017 连接到 Mac</h2><p><em>Visual Studio 2017</em> 的 <em>与 Mac 配对</em> 功能会发现、连接到 <em>Mac</em> 生成主机、对其进行验证并记住生成主机，以便基于 <em>Windows</em> 的 <em>iOS</em> 开发人员能够高效工作。</p>
+<h3 id="启用-Mac-上的远程登录"><a href="#启用-Mac-上的远程登录" class="headerlink" title="启用 Mac 上的远程登录"></a>启用 Mac 上的远程登录</h3><p>若要设置 Mac 生成主机，首先启用远程登录：</p>
+<ol>
+<li><p>在 <em>Mac</em> 上，打开 <em>系统首选项</em> 并转到 <em>共享</em> 窗格。</p>
+</li>
+<li><p>选中 <em>服务</em> 列表中的 <em>远程登录</em>。<br><img src="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/sharing.png" alt></p>
+<p>确保 <em>远程登录</em> 配置为 <em>允许所有用户</em> 访问，或确保 <em>Mac</em> 用户名或组包含在允许用户列表中。</p>
+</li>
+<li><p>如果和 <em>Windows</em> 计算机位于同一局域网内，则 <em>Visual Studio 2017</em> 会自动识别到 <em>Mac</em>。 如果仍无法发现 <em>Mac</em>，请尝试 <a href="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/index#manually-add-a-mac" target="_blank" rel="noopener">手动添加 <em>Mac</em></a> 或查看 <a href="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/troubleshooting" target="_blank" rel="noopener">疑难解答指南</a>。</p>
+</li>
+</ol>
+<h3 id="从-Visual-Studio-2017-连接到-Mac"><a href="#从-Visual-Studio-2017-连接到-Mac" class="headerlink" title="从 Visual Studio 2017 连接到 Mac"></a>从 Visual Studio 2017 连接到 Mac</h3><p>启用远程连接后，将 Visual Studio 2017 连接到 Mac。</p>
+<ol>
+<li><p>在 <em>Visual Studio 2017</em> 中，打开现有的 <em>iOS</em> 项目，或者通过选择 <em>文件 &gt; 新建 &gt; 项目</em>，然后选择 <em>iOS</em> 项目模板来创建新的 <em>iOS</em> 项目。</p>
+</li>
+<li><p>打开  <em>与 Mac配对</em>  对话框。</p>
+<ul>
+<li><p>使用 <em>与 Mac配对</em>  按钮  <em>iOS</em> 工具栏：<br><img src="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/ios-toolbar.png" alt></p>
+</li>
+<li><p>或者，选择 <em>工具 &gt; iOS &gt; 与 Mac配对</em>。</p>
+</li>
+<li><p><em>与 Mac配对</em>  对话框显示所有之前连接的和当前可用的 <em>Mac</em> 生成主机的列表：<br><img src="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/pairtomac.png" alt></p>
+</li>
+</ul>
+</li>
+<li><p>选择列表中的 <em>Mac</em>。 单击 <em>连接</em> </p>
+</li>
+<li><p>输入用户名和密码。</p>
+<ul>
+<li>第一次连接到某特定 <em>Mac</em> 时，会提示为该计算机输入用户名和密码：<br><img src="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/images/auth.png" alt></li>
+</ul>
+<p>-<em>与 Mac配对</em>  使用这些凭据创建到 <em>Mac</em> 的新 <em>SSH</em> 连接。 如果成功，会向 <em>Mac</em> 上的 <em>authorized_keys</em> 文件中添加一个密钥。 以后连接该 <em>Mac</em> 时会自动登录。</p>
+</li>
+</ol>
+<blockquote>
+<p>注意事项：<br>登录时，使用系统用户名而不是全名。 详细 <em>与 Mac配对</em> 教程可以查看官方文档 <a href="https://docs.microsoft.com/zh-cn/xamarin/ios/get-started/installation/windows/connecting-to-mac/" target="_blank" rel="noopener">通过“与 Mac 配对”进行 Xamarin.iOS 开发</a>。</p>
+</blockquote>
 
       
     </div>
@@ -523,15 +686,11 @@
       
         <div class="post-tags">
           
-            <a href="/tags/Xamarin/" <i class="fa fa-tag"> Xamarin</a>
+            <a href="/tags/xamarin/" <i class="fa fa-tag"> xamarin</a>
           
-            <a href="/tags/Library/" <i class="fa fa-tag"> Library</a>
+            <a href="/tags/enviorment-setup/" <i class="fa fa-tag"> enviorment-setup</a>
           
-            <a href="/tags/Android/" <i class="fa fa-tag"> Android</a>
-          
-            <a href="/tags/iOS/" <i class="fa fa-tag"> iOS </a>
-          
-            <a href="/tags/Bindings/" <i class="fa fa-tag"> Bindings</a>
+            <a href="/tags/Windows/" <i class="fa fa-tag"> Windows</a>
           
         </div>
       
@@ -544,18 +703,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/Bindings/xamarin-ios-binding-oc/" rel="next" title="在 Xamarin.iOS 应用程序中使用 Objective-C 库">
-                <i class="fa fa-chevron-left"></i> 在 Xamarin.iOS 应用程序中使用 Objective-C 库
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/uncategorized/xamarin-ios-binding-objectivesharpie-xcode/" rel="prev" title="xamarin-ios-binding-objectivesharpie-xcode">
-                xamarin-ios-binding-objectivesharpie-xcode <i class="fa fa-chevron-right"></i>
+              <a href="/xamarin/xamarin-enviorment-setup-macos/" rel="prev" title="Xamarin开发(MacOS开发)环境配置">
+                Xamarin开发(MacOS开发)环境配置 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -649,8 +804,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -740,6 +904,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#安装-Visual-Studio-2017-搭建-Xamarin-开发环境"><span class="nav-number">1.</span> <span class="nav-text">安装 Visual Studio 2017 搭建 Xamarin 开发环境</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#准备工作"><span class="nav-number">1.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开始安装"><span class="nav-number">1.2.</span> <span class="nav-text">开始安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证-Xamarin-环境"><span class="nav-number">1.3.</span> <span class="nav-text">验证 Xamarin 环境</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xamarin-Android-Configuration"><span class="nav-number">2.</span> <span class="nav-text">Xamarin Android Configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#配置"><span class="nav-number">2.1.</span> <span class="nav-text">配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Android-SDK-Manager"><span class="nav-number">2.2.</span> <span class="nav-text">Android SDK Manager</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Xamarin-Android-Device-Manager"><span class="nav-number">2.3.</span> <span class="nav-text">Xamarin Android Device Manager</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Xamarin-iOS-Configuration"><span class="nav-number">3.</span> <span class="nav-text">Xamarin iOS Configuration</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#设置-MacOS-主机"><span class="nav-number">3.1.</span> <span class="nav-text">设置 MacOS 主机</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#将-Visual-Studio-2017-连接到-Mac"><span class="nav-number">3.2.</span> <span class="nav-text">将 Visual Studio 2017 连接到 Mac</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#启用-Mac-上的远程登录"><span class="nav-number">3.2.1.</span> <span class="nav-text">启用 Mac 上的远程登录</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#从-Visual-Studio-2017-连接到-Mac"><span class="nav-number">3.2.2.</span> <span class="nav-text">从 Visual Studio 2017 连接到 Mac</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
