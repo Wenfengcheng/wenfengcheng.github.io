@@ -130,21 +130,22 @@
 
 
 
-<meta name="description" content="写在前面：">
+<meta name="description" content="写在前面：对于刚接触到 Xamarin 的朋友来说，了解到使用 Xamarin 可以快速搭建跨平台的移动应用 App, 但是对于能否使用原生开发中常用的第三方SDK或开源组件这个问题，许多人都保持着不确定的态度。这个问题的答案是肯定的，几乎所有在原生开发中被使用到的组件，特性，框架等都可以运用到 Xamarin 开发之中 (但是这其中需要我们将通过原生编写的组件转换为可以被 C# 识别且调用的库">
 <meta name="keywords" content="Xamarin,Library,Android,iOS ,Bindings">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Xamarin 中能否使用原生 SDK">
 <meta property="og:url" content="https://wenfengcheng.github.io/Bindings/xamarin-binding-intro/index.html">
 <meta property="og:site_name" content="Funky_Xamarin&#39;s Blog">
-<meta property="og:description" content="写在前面：">
+<meta property="og:description" content="写在前面：对于刚接触到 Xamarin 的朋友来说，了解到使用 Xamarin 可以快速搭建跨平台的移动应用 App, 但是对于能否使用原生开发中常用的第三方SDK或开源组件这个问题，许多人都保持着不确定的态度。这个问题的答案是肯定的，几乎所有在原生开发中被使用到的组件，特性，框架等都可以运用到 Xamarin 开发之中 (但是这其中需要我们将通过原生编写的组件转换为可以被 C# 识别且调用的库">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://upload-images.jianshu.io/upload_images/4421101-64cdd6aae372353b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 <meta property="og:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
 <meta property="og:image" content="https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/images/architecture.png#lightbox">
-<meta property="og:updated_time" content="2019-02-27T09:56:59.342Z">
+<meta property="og:updated_time" content="2019-03-01T01:49:17.716Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xamarin 中能否使用原生 SDK">
-<meta name="twitter:description" content="写在前面：">
-<meta name="twitter:image" content="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220">
+<meta name="twitter:description" content="写在前面：对于刚接触到 Xamarin 的朋友来说，了解到使用 Xamarin 可以快速搭建跨平台的移动应用 App, 但是对于能否使用原生开发中常用的第三方SDK或开源组件这个问题，许多人都保持着不确定的态度。这个问题的答案是肯定的，几乎所有在原生开发中被使用到的组件，特性，框架等都可以运用到 Xamarin 开发之中 (但是这其中需要我们将通过原生编写的组件转换为可以被 C# 识别且调用的库">
+<meta name="twitter:image" content="https://upload-images.jianshu.io/upload_images/4421101-64cdd6aae372353b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240">
 
 
 
@@ -382,8 +383,8 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2019-02-27T17:56:59+08:00">
-                2019-02-27
+              <time title="更新于" itemprop="dateModified" datetime="2019-03-01T09:49:17+08:00">
+                2019-03-01
               </time>
             
           </span>
@@ -453,7 +454,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  864
+                  1.3k
                 </span>
               
 
@@ -469,7 +470,7 @@
                   <span class="post-meta-item-text">阅读时长</span>
                 
                 <span title="阅读时长">
-                  3 分钟
+                  4 分钟
                 </span>
               
             </div>
@@ -491,13 +492,18 @@
 
       
         <blockquote>
-<p>写在前面：</p>
+<p>写在前面：<br>对于刚接触到 <em>Xamarin</em> 的朋友来说，了解到使用 <em>Xamarin</em> 可以快速搭建跨平台的移动应用 <em>App</em>, 但是对于能否使用原生开发中常用的第三方SDK或开源组件这个问题，许多人都保持着不确定的态度。这个问题的答案是肯定的，几乎所有在原生开发中被使用到的组件，特性，框架等都可以运用到 <em>Xamarin</em> 开发之中 <em>(但是这其中需要我们将通过原生编写的组件转换为可以被 </em>C#<em> 识别且调用的库)</em>，而且 <em>Xamarin</em> 不光可以使用原生常用的组件库，还可以使用 <em>C#/.Net Standard</em> 提供的庞大组件库。举个例子来说 <em>iOS 和 Android</em> 其在发送网络请求时各自平台使用的肯定时特有的工具库和机制，但是在 <em>Xamarin</em> 中这部分我们可以直接 <em>C#</em> 提供的处理网络请求工具库，这部分在 <em>iOS 和 Android</em> 两个平台上都能正常运行，且映射到不同的平台及为各自平台原生的实现形式。接下来我们就详细说说 <em>Xamarin</em> 中如何使用原生库。</p>
 </blockquote>
 <a id="more"></a>
-<h1 id="从头开始还是绑定？"><a href="#从头开始还是绑定？" class="headerlink" title="从头开始还是绑定？"></a>从头开始还是绑定？</h1><p>使用Xamarin，在编写SDK时通常有两种选择。您可以从理想情况下开始使用足够通用的PCL项目来定位所有平台，或者您可以创建一个绑定项目，该项目基本上将本机库“包装”在C＃API中。</p>
-<p>如果你的SDK不能访问任何原生功能（或者很少），你可能更好的只是创建PCL PCL还可以为标准iOS，Android和UWP之外的其他平台提供更大的灵活性。</p>
-<p>在我们的例子中，由于我们依赖于许多底层本机API（例如围绕安装跟踪），我们决定采用绑定方法。</p>
-<h1 id="Binding-步骤"><a href="#Binding-步骤" class="headerlink" title="Binding 步骤"></a>Binding 步骤</h1><p>在 <em>Xamarin</em> 中使用第三方 <em>SDK</em> 的大概步骤：</p>
+<h1 id="从头开始还是绑定？"><a href="#从头开始还是绑定？" class="headerlink" title="从头开始还是绑定？"></a>从头开始还是绑定？</h1><p>大家在准备使用某个原生库之前，可以按照以下几步去定位转换这个库的方法：</p>
+<ol>
+<li>首先你想使用某个原生库，第一时间先上 <a href="https://www.nuget.org/" target="_blank" rel="noopener">nuget</a> 上搜一下是否有现成已经转换好的可以直接使用的库。</li>
+<li>如果没有，可以到 <a href="https://github.com/" target="_blank" rel="noopener">github</a> 或者 <em>bing/google</em> 等平台搜索 <em>Xamarin-[Your-Library-Name]</em>，如果有现成的库，可以直接 <em>clone/download</em> 下来添加到自己的项目中使用。</li>
+<li><p>如果都没有，就需要你去查看这个库的复杂程度以及是否涉及到许多底层原生 <em>API</em>，如果只是简单的 <em>UI</em> 工具库，可以直接对照原生代码，翻译 <em>C#</em> 的代码形式即可使用；如果功能比较复杂，且其中包含一些 <em>C/C++</em> 库的引用，这里可能就需要通过手动绑定来转换。</p>
+<p><img src="https://upload-images.jianshu.io/upload_images/4421101-64cdd6aae372353b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" alt></p>
+</li>
+</ol>
+<h1 id="Binding-步骤"><a href="#Binding-步骤" class="headerlink" title="Binding 步骤"></a>Binding 步骤</h1><p>在 <em>Xamarin</em> 中使用原生第三方组件的时候，大部分都需要通过 <em>Binding(绑定)</em> 的形式来进行转换，少部分可以通过翻译代码来实现，使用 <em>Binding(绑定)</em> 来集成第三方组件大概步骤为：</p>
 <ol>
 <li>使用原生构建 <em>.jar/.aar(用于Java绑定)</em> 和 <em>.a/.framework(用于OC/Swift绑定)</em> 文件。<blockquote>
 <p>友情提示：<br>这里可以 <em>clone or copy Java, OC, Swift</em> 代码自己构建，或者直接使用第三方已经生成好的  <em>.jar/.aar</em> 和 <em>.a/.framework</em></p>
@@ -511,18 +517,23 @@
 <p><img src="https://image.slidesharecdn.com/techcampxamarin2014-140323030949-phpapp02/95/techcamp-xamarin-2014-11-638.jpg?cb=1395544220" alt="xamarin-binding-library"></p>
 </li>
 </ol>
-<h2 id="绑定-Java-库"><a href="#绑定-Java-库" class="headerlink" title="绑定 Java 库"></a>绑定 Java 库</h2><p>适用于 Android 的第三方库生态系统是巨大的。 因此，通常最好使用比创建一个新的现有 Android 库。 Xamarin.Android 提供两种方法来使用这些库：<br>创建绑定库自动包装与库C#包装器，因此可以调用 Java 代码通过C#的调用。<br>使用Java 本机接口(JNI) 来直接调用 Java 库代码中的调用。 JNI 是一个编程框架，允许调用并由本机应用程序或库调用的 Java 代码。</p>
+<h2 id="绑定-Java-库"><a href="#绑定-Java-库" class="headerlink" title="绑定 Java 库"></a>绑定 Java 库</h2><p>适用于 <em>Android</em> 的第三方库生态系统是巨大的，因此，使用现成的 <em>Android</em> 第三方库比重新去新建一个同样功能库要更好。 <em>Xamarin.Android</em> 提供两种方法来使用这些库：</p>
+<ol>
+<li>创建 <em>Bindings Library(绑定库)</em>, 其中将自动包含这个原生库以及该原生库的 <em>C#</em> 包装定义，因此可以通过 <em>C#</em> 的调用 <em>Java</em> 代码。</li>
+<li><p>使用 <em>Java Native Interface (JNI)</em> 来直接调用原生 <em>Java</em> 库代码。 <a href="https://docs.microsoft.com/en-us/xamarin/android/platform/java-integration/working-with-jni" target="_blank" rel="noopener">JNI</a> 是一个编程框架，允许 <em>Java</em> 调用并且支持由本机应用程序或库调用的 <em>Java</em> 代码。</p>
 <p><img src="https://docs.microsoft.com/en-us/xamarin/android/platform/binding-java-library/images/architecture.png#lightbox" alt></p>
+</li>
+</ol>
 <h2 id="绑定-OC-库"><a href="#绑定-OC-库" class="headerlink" title="绑定 OC 库"></a>绑定 OC 库</h2><p>为 <em>Xamarin</em> 创建 <em>OC</em> 的绑定库大概为三个步骤：</p>
 <ol>
-<li>编写C#”API 定义”来描述如何本机 API 公开在.NET 中，以及它如何映射到基础 Objective-c。 这是使用标准C#构造喜欢interface和各种绑定特性(请参阅此简单示例)。</li>
-<li>一旦您编写”API 定义” C#，其生成”绑定”程序集进行编译。 这可以在命令行也可以使用绑定项目 Visual Studio for Mac 或 Visual Studio 中。</li>
-<li>该”绑定”程序集然后添加到 Xamarin 应用程序项目中，以便可以访问使用你定义的 API 的本机功能。 绑定项目是完全独立于应用程序项目。</li>
+<li>编写描述如何将原生 <em>API</em> 暴露在<em>.NET</em> 中 <em>C# API 定义</em>，以及它如何映射到 <em>Objective-C</em>。 这可以通过使用标准C#构造 <em>(如interface)</em> 和各种<a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/objective-c-libraries#Binding_an_API" target="_blank" rel="noopener">绑定特性</a>实现。</li>
+<li>一旦你编写完了原生 <em>API</em> 在<em>.NET</em> 中 <em>C# API 定义</em> 的实现，其编译生成 <em>binding assembly(绑定程序集)</em>。 实现方式可以通过 <a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/overview#commandline" target="_blank" rel="noopener">命令行</a> 也可以使用 <a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/overview#bindingproject" target="_blank" rel="noopener">绑定项目</a> <em>Visual Studio for Mac 或 Visual Studio</em> 中。</li>
+<li>之后添加 <em>binding assembly(绑定程序集)</em> 到 <em>Xamarin</em> 应用程序项目中，以便你通过自定义的 <em>C# API 定义</em> 访问原生组件的功能。 绑定项目是完全独立于应用程序项目。</li>
 </ol>
 <blockquote>
-<p>注意事项：<br>可以使用的帮助自动执行步骤 1 目标 Sharpie。 它会检查 Objective C API 并生成建议C#”API 定义”。 您可以自定义目标 Sharpie 创建的文件并将其绑定项目 （或在命令行上） 来创建绑定程序集。 目标 Sharpie 不会创建单独的绑定，而是只是较大过程的一个可选部分。</p>
+<p>注意事项：<br><strong>步骤 1</strong> 可以通过 <a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/overview#objectivesharpie" target="_blank" rel="noopener">Objective Sharpie</a> 自动完成。 它会检查 <em>Objective-C API</em> 并生成建议 <em>C# API 定义</em>。 您可以自定义 <em>Objective Sharpie</em> 自定生成的文件并将其绑定项目(或在命令行上)来创建绑定程序集。<em>Objective Sharpie</em> 不会创建单独的绑定，而是整个绑定过程的一个可选部分。详细的绑定工作原理可以参考 <a href="https://docs.microsoft.com/en-us/xamarin/cross-platform/macios/binding/overview#how-binding-works" target="_blank" rel="noopener">How Binding Works</a>。</p>
 </blockquote>
-<h2 id="绑定-Swift-库"><a href="#绑定-Swift-库" class="headerlink" title="绑定 Swift 库"></a>绑定 Swift 库</h2><h2 id="绑定-C-C-库"><a href="#绑定-C-C-库" class="headerlink" title="绑定 C/C++ 库"></a>绑定 C/C++ 库</h2>
+
       
     </div>
     
@@ -786,7 +797,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从头开始还是绑定？"><span class="nav-number">1.</span> <span class="nav-text">从头开始还是绑定？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binding-步骤"><span class="nav-number">2.</span> <span class="nav-text">Binding 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-Java-库"><span class="nav-number">2.1.</span> <span class="nav-text">绑定 Java 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-OC-库"><span class="nav-number">2.2.</span> <span class="nav-text">绑定 OC 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-Swift-库"><span class="nav-number">2.3.</span> <span class="nav-text">绑定 Swift 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-C-C-库"><span class="nav-number">2.4.</span> <span class="nav-text">绑定 C/C++ 库</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#从头开始还是绑定？"><span class="nav-number">1.</span> <span class="nav-text">从头开始还是绑定？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Binding-步骤"><span class="nav-number">2.</span> <span class="nav-text">Binding 步骤</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-Java-库"><span class="nav-number">2.1.</span> <span class="nav-text">绑定 Java 库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#绑定-OC-库"><span class="nav-number">2.2.</span> <span class="nav-text">绑定 OC 库</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -820,7 +831,7 @@
     
       <span class="post-meta-item-text">博客全站共&#58;</span>
     
-    <span title="博客全站共">8.2k 字</span>
+    <span title="博客全站共">8.7k 字</span>
   
 </div>
 
